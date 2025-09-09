@@ -36,7 +36,9 @@ export default function Blogdetail() {
 
     // Save comments to localStorage
     useEffect(() => {
-        localStorage.setItem("comments", JSON.stringify(comments));
+        if (typeof window !== "undefined") {
+            localStorage.setItem("comments", JSON.stringify(comments));
+        }
     }, [comments]);
 
     const handleChange = (e) => {

@@ -1,0 +1,34 @@
+@import "leaflet/dist/leaflet.css";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Dark theme scrollbar styling */
+
+html,
+body {
+  background-color: #FFF;
+  overflow-x: hidden;
+}
+
+img {
+  pointer-events: none;
+  
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+::placeholder {
+  color: #808080 !important;
+  /* stable neutral gray */
+  opacity: 1;
+}
+
+

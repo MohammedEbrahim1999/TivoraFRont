@@ -1,10 +1,10 @@
 import { Resend } from "resend";
 
-const resend = new Resend(re_fiUmx5Vd_26iQicdg9UVRgBvgLXmtCAcJ);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
     try {
-        const { name,phone, email, message } = await req.json();
+        const { name, phone, email, message } = await req.json();
 
         await resend.emails.send({
             from: "onboarding@resend.dev", // can be changed to your domain later
